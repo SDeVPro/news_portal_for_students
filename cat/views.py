@@ -56,14 +56,14 @@ def import_cat_csv(request):
         lines = file_data.split("\n")
         for line in lines:
             fields = line.split(",")
-            try:
+            try:#try == if 
                 if len(Cat.objects.filter(name=fields[0])) == 0 and fields[0]!="Title" and fields[0] != "":
                     b = Cat(name=fields[0])
                     b.save()
-            except:
+            except:#except == else 
                 print("Finish")
     return redirect('cat_list')
-    
+
 
 
 
