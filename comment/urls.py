@@ -1,5 +1,5 @@
-from django.conf.urls import path 
-from . import views 
+from django.urls import path
+from .import views
 
 urlpatterns = [
     path('comment/add/news/<pk:pk>/',views.news_cm_add,name='news_cm_add'),
